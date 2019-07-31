@@ -13,23 +13,26 @@
     <script>                //var is variable aka container
         var canvas;        //handle on dimensions
         var canvasContext; //underline graphical information
-        var ballX 50; //declare variable and set it to 50
+        var ballX= 50; //declare variable and set it to 50
 
         window.onload = function () {        //this is a built-in function
             console.log("Hello World!");
             canvas = document.getElementById('gameCanvas');
             canvasContext = canvas.getContext('2d');
-            drawEverything();
+
+            setInterval(drawEverything, 100); //1000 ms to slow it down
+   
         }
 
         function drawEverything() {    //custom function
-
+            ballX = ballX + 5;    //ball @ x-cordinates
+            console.log(ballX); //almost like a unit test to see what the variablee is
             canvasContext.fillStyle = ' black';  //fills first so shapes don't go behind it
             canvasContext.fillRect(0, 0, canvas.width, canvas.height);  //0,0 x,y coordinates
             canvasContext.fillStyle = 'white';
             canvasContext.fillRect(255, 210, 200, 200);
             canvasContext.fillStyle = 'red';
-            canvasContext.fillRect(ballX, 200, 50, 25);
+            canvasContext.fillRect(ballX, 100, 10, 10);
 
 
         }  
