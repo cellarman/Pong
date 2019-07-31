@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+
+
+<body>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <script>                //var is variable aka container
+        var canvas;        //handle on dimensions
+        var canvasContext; //underline graphical information
+
+        window.onload = function () {
+            console.log("Hello World!");
+            canvas = document.getElementById('gameCanvas');
+            canvasContext = canvas.getContext('2d');
+            canvasContext.fillStyle = ' black';
+            canvasContext.fillRect(0, 0, canvas.width, canvas.height);
+        }
+
+
+    </script>
+
+    <b>Test</b>
+
+
+
+</body>
+
+
+</html>
