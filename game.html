@@ -13,16 +13,26 @@
     <script>                //var is variable aka container
         var canvas;        //handle on dimensions
         var canvasContext; //underline graphical information
+        var ballX 50; //declare variable and set it to 50
 
-        window.onload = function () {
+        window.onload = function () {        //this is a built-in function
             console.log("Hello World!");
             canvas = document.getElementById('gameCanvas');
             canvasContext = canvas.getContext('2d');
-            canvasContext.fillStyle = ' black';
-            canvasContext.fillRect(0, 0, canvas.width, canvas.height);  //0,0 x,y coordinates
-            canvasContext.fillStyle = 'red';
+            drawEverything();
         }
 
+        function drawEverything() {    //custom function
+
+            canvasContext.fillStyle = ' black';  //fills first so shapes don't go behind it
+            canvasContext.fillRect(0, 0, canvas.width, canvas.height);  //0,0 x,y coordinates
+            canvasContext.fillStyle = 'white';
+            canvasContext.fillRect(255, 210, 200, 200);
+            canvasContext.fillStyle = 'red';
+            canvasContext.fillRect(ballX, 200, 50, 25);
+
+
+        }  
 
     </script>
 
